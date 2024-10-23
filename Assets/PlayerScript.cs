@@ -16,6 +16,8 @@ public class PlayerScript : MonoBehaviour
     {
         const float moveSpeed = 5.0f;
         Vector3 v = rd.velocity;
+        v.x = 0;
+        v.z = 0;
         if (Input.GetKey(KeyCode.D))
         {
             v.x = moveSpeed;

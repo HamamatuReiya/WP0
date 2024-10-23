@@ -5,6 +5,14 @@ using UnityEngine;
 public class BoxScript : MonoBehaviour
 {
     // Start is called before the first frame update
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.tag == "SWITCH")
+        {
+            other.gameObject.SetActive(false);
+        }
+    }
+
     void Start()
     {
         
