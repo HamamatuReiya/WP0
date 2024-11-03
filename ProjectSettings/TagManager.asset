@@ -5,7 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Box
-  - SWITCH
+  - Switch
+  - Goal
   layers:
   - Default
   - TransparentFX
