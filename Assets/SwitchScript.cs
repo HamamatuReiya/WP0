@@ -5,19 +5,23 @@ using UnityEngine;
 public class SwitchScript : MonoBehaviour
 {
     public GameObject Goal;
+    public bool flag = false;
     // Start is called before the first frame update
-    private void OnTriggerEnter(Collider other)
-    {
-        Goal.SetActive(true);
-    }
+
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        //Goal.SetActive(flag);
+    }
+    private void OnTriggerStay(Collider other)
+    {
+        Debug.Log("Hit");
+        flag = true;
+        Goal.SetActive(flag);
     }
 }
