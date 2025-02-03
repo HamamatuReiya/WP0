@@ -6,22 +6,32 @@ public class SwitchScript : MonoBehaviour
 {
     public GameObject Goal;
     public bool flag = false;
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.gameObject.tag == "Box")
+        {
+            flag = true;
+            Goal.SetActive(flag);
+        }
+    }
     // Start is called before the first frame update
 
     void Start()
     {
-        
+        flag = false;
+        Goal.SetActive(flag);
     }
 
     // Update is called once per frame
     void Update()
     {
-        //Goal.SetActive(flag);
-    }
-    private void OnTriggerStay(Collider other)
-    {
-        Debug.Log("Hit");
-        flag = true;
-        Goal.SetActive(flag);
+        //if(flag == false)
+        //{
+        //    Goal.SetActive(flag);
+        //}
+        //if(flag == true)
+        //{
+        //    flag = false;
+        //}
     }
 }
